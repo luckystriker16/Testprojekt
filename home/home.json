@@ -1,5 +1,16 @@
 {
     "header":[{
-        "titel":"Eine Titel"
-    }]
+        "titel":"Eine Titel",
+        "untertitel":"Ein Untertitel"
+    }],
+    "nav":[
+        {
+            "name":"Home",
+            "link":"home.html"
+        },
+        {
+            "name":"Startseite",
+            "link":"../index.html"
+        }
+    ]
 }
