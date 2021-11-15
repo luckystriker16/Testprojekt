@@ -23,6 +23,7 @@ function site_load(){
         var header = document.getElementById("header");
         if(data.header[0].titel){
             console.log("titel");
+            header.innerHTML = "<h1>"+ data.header[0].titel +"</h1>";
         }
     }
 }
