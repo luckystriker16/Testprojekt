@@ -1,0 +1,99 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*background: url(bilder/back3.png) no-repeat center center fixed; --> Bild als Hintergrund
+    background-size: cover;
+    background-attachment: fixed; */
+  }
+  
+  * {
+    box-sizing: border-box;
+    /*border-radius: 1em; --> Alle Ecken rund*/
+  }
+  
+  body{
+    background-color:black; /*Hintergrundfarbe der Seite*/
+  }
+  
+  /*h2, h1{  --> Überschriften Styles
+    text-decoration: underline;
+  }*/
+  
+  .header{
+    text-align:center;
+    background-color:lightgray;
+    padding:1em;
+  }
+  
+  .nav{
+    overflow:hidden;
+    background-color:rgb(37, 37, 37);
+  }
+  
+  .nav a{
+    display: block;
+    float: left;
+    text-decoration: none;
+    color:white;
+    padding:1em;
+    /*border-right:1px solid gray; --> mögliche Abgrenzung*/
+  }
+  
+  .nav a:hover{
+    background-color:white;
+    color:black;
+  }
+  
+  .left{
+    width:75%;
+    float:left;
+  }
+  
+  .right{
+    width:25%;
+    float:left;
+    padding-left:1em; /*      --> Der Abstand zwischen right und left */
+    /*overflow:visible;  -->
+    position: sticky;    --> Rechte Seite bleibt immer
+    top: 0;              -->                             */
+  }
+  
+  .card{
+    background-color: gray;
+    padding:1em;
+    margin-top:1em; /* --> Abstand zwischen cards */
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .footer{
+    background-color: darkgray;
+    text-align:center;
+    padding:1em;
+    margin-top:1em;
+  }
+  
+  .footer a{
+    color:#353535;
+    display:inline-block;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .left, .right {   
+      width: 100%;
+      padding: 0;
+      /*position:unset; --> für Rechte Seite bleibt immer*/
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .nav a {
+      float: none;
+      width: 100%;
+      text-align:center;
+    }
+  }
+  
