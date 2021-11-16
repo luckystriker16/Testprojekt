@@ -21,6 +21,7 @@ function site_load(){
     var header = document.getElementById("header");
     var nav = document.getElementById("nav");
     var left = document.getElementById("left");
+    var right = document.getElementById("right");
 
     if(data.header){ //header
         console.log("header");
@@ -39,10 +40,15 @@ function site_load(){
             nav.innerHTML = nav.innerHTML +"<a href='"+ data.nav[i].link +"'>"+ data.nav[i].name +"</a>";
         }
     }
-    if(data.row){
-        if(data.row[0].left){
+    if(data.row){ // row
+        if(data.row[0].left){ //left
             for(i=0; i<data.row[0].left.length; i++){
                 left.innerHTML = left.innerHTML + "<div class='card'><h2>"+ data.row[0].left[i].titel +"</h2><p>"+ data.row[0].left[i].content +"</p></div>";
+            }
+        }
+        if(data.row[0].right){ //right
+            for(i=0; i<data.row[0].right.length; i++){
+                right.innerHTML = right.innerHTML + "<div class='card'><h2>"+ data.row[0].right[i].titel +"</h2><p>"+ data.row[0].right[i].content +"</p></div>";
             }
         }
     }
