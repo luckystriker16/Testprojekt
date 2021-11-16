@@ -34,7 +34,7 @@ function site_load(){
         console.log("navigation");
         var nav = document.getElementById("nav");
         if(data.nav){
-            for(i=0; i<data.nav[i].length; i++){
+            for(i=0; i<data.nav.length; i++){
                 nav.innerHTML = nav.innerHTML +"<a href='"+ data.nav[i].link +"'>"+ data.nav[i].name +"</a>";
             }
         }
