@@ -50,6 +50,8 @@ function site_load(){
             for(i=0; i<data.row[0].right.length; i++){
                 right.innerHTML = right.innerHTML + "<div class='card'><h2>"+ data.row[0].right[i].titel +"</h2><p>"+ data.row[0].right[i].content +"</p></div>";
             }
+        }else{
+            left.style.width = "100%";
         }
     }
 }
