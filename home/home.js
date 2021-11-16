@@ -18,9 +18,12 @@ function load_data(){
 }
 
 function site_load(){
-    if(document.getElementById("header")){
+    var header = document.getElementById("header");
+    var nav = document.getElementById("nav");
+    var left = document.getElementById("left");
+
+    if(data.header){ //header
         console.log("header");
-        var header = document.getElementById("header");
         if(data.header[0].titel){
             console.log("titel");
             header.innerHTML = "<h1>"+ data.header[0].titel +"</h1>";
@@ -30,13 +33,16 @@ function site_load(){
             header.innerHTML = header.innerHTML + "<h2>"+ data.header[0].untertitel +"</h2>";
         }
     }
-    if(document.getElementById("nav")){
+    if(data.nav){ //nav
         console.log("navigation");
-        var nav = document.getElementById("nav");
-        if(data.nav){
-            for(i=0; i<data.nav.length; i++){
-                console.log("nav: "+ i);
-                nav.innerHTML = nav.innerHTML +"<a href='"+ data.nav[i].link +"'>"+ data.nav[i].name +"</a>";
+        for(i=0; i<data.nav.length; i++){
+            nav.innerHTML = nav.innerHTML +"<a href='"+ data.nav[i].link +"'>"+ data.nav[i].name +"</a>";
+        }
+    }
+    if(data.row){
+        if(data.row[0].left){
+            for(i=0; i<data.row[0].left.length; i++){
+                left.innerHTML = left.innerHTML + "<div class='card'><h2>"+ data.row[0].left[i].titel +"</h2><p>"+ data.row[0].left[i].content +"</p></div>";
             }
         }
     }

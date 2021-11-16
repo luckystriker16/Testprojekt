@@ -12,5 +12,21 @@
             "name":"Startseite",
             "link":"../index.html"
         }
+    ],
+    "row":[
+        {
+            "left":[
+                {
+                    "titel":"Card1",
+                    "content":"Cardcontent"
+                }
+            ],
+            "right":[
+                {
+                    "titel":"Card2",
+                    "content":"Cardcontent2"
+                }
+            ]
+        }
     ]
 }
