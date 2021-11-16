@@ -35,6 +35,7 @@ function site_load(){
         var nav = document.getElementById("nav");
         if(data.nav){
             for(i=0; i<data.nav.length; i++){
+                console.log("nav: "+ i);
                 nav.innerHTML = nav.innerHTML +"<a href='"+ data.nav[i].link +"'>"+ data.nav[i].name +"</a>";
             }
         }
